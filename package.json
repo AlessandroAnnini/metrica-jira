@@ -1,0 +1,10 @@
+{
+  "name": "metrica-jira",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "dependencies": {
+    "@forge/api": "^2.8.0",
+    "table": "^6.8.0"
+  }
+}

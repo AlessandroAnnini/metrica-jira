@@ -1,0 +1,24 @@
+modules:
+  scheduledTrigger:
+    - key: metrica-forge-scheduled-trigger
+      function: get-projects
+      interval: day
+  webtrigger:
+    - key: main-web-trigger-key
+      function: web-trigger-function
+  function:
+    - key: get-projects
+      handler: index.main
+    - key: web-trigger-function
+      handler: index.runWebTrigger
+app:
+  id: ari:cloud:ecosystem::app/40a30289-daf1-4b56-88ed-309116b278b7
+permissions:
+  scopes:
+    - read:me
+    - read:jira-work
+    - read:jira-user
+  external:
+    fetch:
+      backend:
+        - '*.github.com'
